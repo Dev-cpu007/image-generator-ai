@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Kalpana-AI</title>
+  <link rel="icon" href=" /ai-svgrepo-com.svg" type="image/png">
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//randomuser.me">
+  <!-- Load styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./src/index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Critical CSS for first paint */
+    body {    
+      background: #f7fdfa;
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Improved responsiveness */
+    @media (max-width: 640px) {
+      .hero-heading {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+      .hero-description {
+        font-size: 0.9rem;
+      }
+    }
+    /* Better mobile navigation */
+    #mobile-nav {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    #mobile-nav.open {
+      max-height: 500px;
+    }
+    /* Touch-friendly elements */
+    a, button {
+      min-width: 44px;
+      min-height: 44px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    
+    <!-- Mobile-first header -->
+    <header class="w-full py-4 sm:py-5 px-4 sm:px-8 md:px-16 flex flex-wrap justify-between items-center bg-white shadow-sm">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <span class="inline-block bg-[#3885ff] rounded-lg p-2">
+          <!-- Logo -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#3885ff"/>
+            <circle cx="8" cy="8" r="2" fill="white"/>
+            <circle cx="16" cy="8" r="2" fill="white"/>
+            <circle cx="12" cy="16" r="2" fill="white"/>
+            <path d="M8 8L12 16M16 8L12 16" stroke="white" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="text-xl sm:text-2xl font-bold text-black">Kalpana-AI</span>
+      </div>
+      
+      <!-- Mobile menu toggle -->
+      <button id="menu-toggle" class="md:hidden p-2 focus:outline-none" aria-label="Menu">
+        <i class="fas fa-bars text-xl text-gray-700"></i>
+      </button>
+      
+      <!-- Mobile nav (hidden by default) -->
+      <nav id="mobile-nav" class="w-full md:hidden bg-white">
+        <div class="flex flex-col space-y-3 py-3">
+          <a href="#" class="text-gray-700 text-sm hover:underline p-2">Pricing</a>
+          <a href="#" class="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition text-center">
+            Login
+          </a>
+        </div>
+      </nav>
+      
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center space-x-4 lg:space-x-2">
+        <a href="#" class="text-gray-700 text-sm lg:text-base hover:underline p-2">Pricing</a>
+        <a href="#" class="px-8 py-2 bg-black text-white rounded-full text-sm lg:text-base font-medium hover:bg-gray-800 focus:outline-none transition">
+          Login
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <main class="flex-grow">
+      <section class="pt-6 pb-12 px-5 sm:px-8">
+        <div class="max-w-4xl mx-auto">
+          <!-- Badge - using original placeholder -->
+          <div class="mb-4 sm:mb-8 text-center">
+            <span class="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 rounded-full border border-gray-200 bg-white shadow-sm text-sm sm:text-base font-normal">
+              Best text to image generator
+              <span class="ml-1 sm:ml-2">🧡</span>
+            </span>
+          </div>
+          
+          <!-- Responsive headline -->
+          <h1 class="hero-heading text-center text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight mb-4">
+            Turn text to <span class="text-[#3885ff]">image</span>, <br class="sm:hidden">in seconds
+          </h1>
+          
+          <!-- Description -->
+          <p class="hero-description text-center text-gray-600 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
+            Unleash your creativity with AI. Turn your imagination into visual art instantly.
+          </p>
+          
+          <!-- CTA - using original styling -->
+          <div class="flex justify-center">
+            <button class="w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition flex items-center justify-center">
+              <span class="mr-2 text-base sm:text-lg">Generate Images</span>
+              <span>✨</span>
+            </button>
+          </div>
+          
+          <!-- Images - using original placeholders -->
+          <div class="mt-6 sm:mt-10"> <!-- Reduced top margin on mobile -->
+            <div class="grid grid-cols-2 sm:flex gap-2 sm:gap-3 justify-center"> <!-- Tighter gap on mobile -->
+              <!-- Image 1 - Always visible -->
+              <div class="flex justify-center"> <!-- Wrapper for better centering -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNxoeiMi1MIf18hNC8kWiGzwtYDl0qcVA6fQQ4GvVSQ&s&ec=72940545" 
+                     alt="AI artwork sample" 
+                     class="w-20 sm:w-24 aspect-square rounded-lg object-cover" 
+                     loading="lazy"> <!-- Smaller size (w-20) on mobile -->
+              </div>
+              
+              <!-- Image 2 - Always visible -->
+              <div class="flex justify-center">
+                <img src="https://img-cdn.pixlr.com/image-generator/history/65ba5701b4f4f4419f746bc3/806ecb58-167c-4d20-b658-a6a6b2f221e9/medium.webp" 
+                     alt="AI artwork sample" 
+                     class="w-20 sm:w-24 aspect-square rounded-lg object-cover"
+                     loading="lazy">
+              </div>
+              
+              <!-- Image 3 - Hidden on mobile -->
+              <div class="hidden sm:flex justify-center"> <!-- More semantic hiding -->
+                <img src="https://asset.gecdesigns.com/img/wallpapers/hyper-realistic-beautiful-young-woman-with-party-gown-ai-generated-image-sr14062404-cover.webp" 
+                     alt="AI artwork sample" 
+                     class="w-24 aspect-square rounded-lg object-cover"
+                     loading="lazy">
+              </div>
+              
+              <!-- Image 4 - Hidden on mobile -->
+              <div class="hidden sm:flex justify-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWmCEcMIJGwOqEtCFCxu8LErGvaNYnOTOtXBI1DwCsTw&s&ec=72940545" 
+                     alt="AI artwork sample" 
+                     class="w-24 aspect-square rounded-lg object-cover"
+                     loading="lazy">
+              </div>
+            </div>
+            <p class="text-center text-gray-500 text-xs mt-1 sm:mt-2"> <!-- Tighter spacing -->
+              Examples generated by Kalpana-AI
+            </p>
+          </div>
+          
+        </div>
+      </section>
+      
+      <!-- Customer Testimonials Section -->
+      
+      <!-- Showcase grid - using original placeholders -->
+      <section class="py-6 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-xl sm:text-2xl font-bold text-center mb-4">AI Generated Masterpieces</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Card 1 -->
+            <div class="bg-white p-3 rounded-lg shadow-sm">
+              <div class="aspect-square overflow-hidden rounded-lg mb-2">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/033/096/522/small_2x/volcanic-eruption-disaster-ai-generated-photo.jpg" 
+                alt="Volcanic eruption" 
+                class="w-full h-full object-cover"
+                loading="lazy">
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 text-center">"Sunset over mountains"</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-3 rounded-lg shadow-sm">
+              <div class="aspect-square overflow-hidden rounded-lg mb-2">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/398a7fa4-5de3-4b47-aeb7-18060ae4a772/d34436e8-f22b-4a0e-90d0-ab3f8e81f2f5.png" 
+                alt="Ocean view" 
+                class="w-full h-full object-cover"
+                loading="lazy">
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 text-center">"Ocean at sunset"</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-3 rounded-lg shadow-sm">
+              <div class="aspect-square overflow-hidden rounded-lg mb-2">
+                <img src="https://t3.ftcdn.net/jpg/05/58/17/60/360_F_558176055_q1eGdm8DLq9I6por4yilpNCaL3O8Fguf.jpg" 
+                alt="Forest path" 
+                class="w-full h-full object-cover"
+                loading="lazy">
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 text-center">"Misty forest pathway"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Steps section - original layout -->
+      <section class="py-8 px-5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-xl sm:text-2xl font-bold text-center mb-2">How it works</h2>
+          <p class="text-center text-gray-600 text-sm sm:text-base mb-6">Transform Words Into Stunning Images</p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-edit text-blue-600"></i>
+              </div>
+              <h3 class="font-bold text-base">Describe</h3>
+              <p class="text-gray-600 text-xs sm:text-sm">Enter your vision in text</p>
+            </div>
+            <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-bolt text-blue-600"></i>
+              </div>
+              <h3 class="font-bold text-base">Generate</h3>
+              <p class="text-gray-600 text-xs sm:text-sm ">AI creates your artwork</p>
+            </div>
+            <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-image text-blue-600"></i>
+              </div>
+              <h3 class="font-bold text-base">Enjoy</h3>
+              <p class="text-gray-600 text-xs sm:text-sm">Download or share</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section>
+      <header class="pt-16 pb-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Create AI Images</h1>
+        <p class="mt-3 text-lg text-gray-400 font-normal">Turn your imagination into visuals</p>
+      </header>
+      
+      <!-- Main Section -->
+      <section class="flex flex-col lg:flex-row gap-12 items-center justify-center mt-2 max-w-6xl mx-auto px-4 py-8">
+        <!-- Left: Image -->
+        <div class="flex-shrink-0">
+          <img 
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+          alt="AI generated, monster and cake"
+          class="rounded-xl shadow-lg max-w-xs sm:max-w-md lg:max-w-lg w-full object-cover"
+          style="aspect-ratio:1/1"
+          />
+        </div>
+        <!-- Right: Text -->
+        <div class="max-w-xl text-left">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-5 leading-snug">
+            Introducing the AI-Powered Text to Image Generator
+          </h2>
+          <p class="text-gray-500 text-base mb-4">
+            Easily bring your ideas to life with our free AI image generator. Whether you need stunning visuals or unique imagery, our tool transforms your text into eye-catching images with just a few clicks. Imagine it, describe it, and watch it come to life instantly.
+          </p>
+          <p class="text-gray-500 text-base">
+            Simply type in a text prompt, and our cutting-edge AI will generate high-quality images in seconds. From product visuals to character designs and portraits, even concepts that don’t yet exist can be visualized effortlessly. Powered by advanced AI technology, the creative possibilities are limitless!
+          </p>
+        </div>
+      </section>
+    </section>
+    
+    
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Customer testimonials</h2>
+          <p class="text-blue-600 mt-2">What Our Users Are Saying</p>
+        </div>
+        
+        <!-- Testimonial Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Donald Jackman" class="w-12 h-12 rounded-full object-cover mr-4">
+              <div>
+                <h4 class="font-bold">Donald Jackman</h4>
+                <p class="text-gray-500 text-sm">Graphic Designer</p>
+              </div>
+            </div>
+            <div class="flex mb-3 text-yellow-400">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="text-gray-600 italic">
+              "I've been using Kalpana-AI for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
+            </p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Richard Nelson" class="w-12 h-12 rounded-full object-cover mr-4">
+              <div>
+                <h4 class="font-bold">Richard Nelson</h4>
+                <p class="text-gray-500 text-sm">Content Creator</p>
+              </div>
+            </div>
+            <div class="flex mb-3 text-yellow-400">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="text-gray-600 italic">
+              "Kalpana-AI has transformed how I create visual content. The quality is consistently impressive and saves me hours of work each week."
+            </p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="James Washington" class="w-12 h-12 rounded-full object-cover mr-4">
+              <div>
+                <h4 class="font-bold">James Washington</h4>
+                <p class="text-gray-500 text-sm">Co-Founder</p>
+              </div>
+            </div>
+            <div class="flex mb-3 text-yellow-400">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="text-gray-600 italic">
+              "As a startup founder, Kalpana-AI has been invaluable for creating professional marketing materials without needing a design team."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer - original styling -->
+    <footer class="bg-gray-900 text-white py-8 px-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+          <div class="mb-4 sm:mb-0">
+            <span class="text-xl font-bold text-blue-400">Kalpana-AI</span>
+            <p class="text-gray-400 text-xs mt-1">© 2024 All rights reserved</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Mobile menu functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', function() {
+          mobileNav.classList.toggle('open');
+        });
+      }
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+          mobileNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
+
