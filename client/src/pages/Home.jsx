@@ -3,47 +3,6 @@ import React from 'react';
 const Home = () => {
     return (
         <>
-        {/* <!-- Mobile-first header --> */}
-    <header className="w-full py-4 sm:py-5 px-4 sm:px-8 md:px-16 flex flex-wrap justify-between items-center bg-white shadow-sm">
-      {/* <!-- Logo --> */}
-      <div className="flex items-center space-x-2">
-        <span className="inline-block bg-[#3885ff] rounded-lg p-2">
-          {/* <!-- Logo --> */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#3885ff"/>
-            <circle cx="8" cy="8" r="2" fill="white"/>
-            <circle cx="16" cy="8" r="2" fill="white"/>
-            <circle cx="12" cy="16" r="2" fill="white"/>
-            <path d="M8 8L12 16M16 8L12 16" stroke="white" stroke-width="1.5"/>
-          </svg>
-        </span>
-        <span className="text-xl sm:text-2xl font-bold text-black">Kalpana-AI</span>
-      </div>
-      
-      {/* <!-- Mobile menu toggle --> */}
-      <button id="menu-toggle" className="md:hidden p-2 focus:outline-none" aria-label="Menu">
-        <i className="fas fa-bars text-xl text-gray-700"></i>
-      </button>
-      
-      {/* <!-- Mobile nav (hidden by default) --> */}
-      <nav id="mobile-nav" className="w-full md:hidden bg-white">
-        <div className="flex flex-col space-y-3 py-3">
-          <a href="#" className="text-gray-700 text-sm hover:underline p-2">Pricing</a>
-          <a href="#" className="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition text-center">
-            Login
-          </a>
-        </div>
-      </nav>
-      
-      {/* <!-- Desktop nav --> */}
-      <nav className="hidden md:flex items-center space-x-4 lg:space-x-2">
-        <a href="#" className="text-gray-700 text-sm lg:text-base hover:underline p-2">Pricing</a>
-        <a href="#" className="px-8 py-2 bg-black text-white rounded-full text-sm lg:text-base font-medium hover:bg-gray-800 focus:outline-none transition">
-          Login
-        </a>
-      </nav>
-    </header>
-
     {/* <!-- Hero section --> */}
     <main className="flex-grow">
       <section className="pt-6 pb-12 px-5 sm:px-8">
