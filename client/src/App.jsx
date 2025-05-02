@@ -4,6 +4,8 @@ import Home from './pages/Home.jsx'
 import Result from './pages/Result.jsx';
 import BuyCredit from './pages/BuyCredit.jsx';
 import Navbar from './components/navbar.jsx';
+import Testinomial from './components/Testinomial.jsx';
+import Footer from './components/Footer.jsx';
 
 
 const App = () => {
@@ -15,6 +17,8 @@ const App = () => {
                 <Route path='/result' element={<Result/>}/>
                 <Route path='/buy' element={<BuyCredit/>}/>
             </Routes>
+            <Testinomial/>
+            <Footer/>
         </div>
     );
 }
