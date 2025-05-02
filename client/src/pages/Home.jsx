@@ -130,21 +130,21 @@ const Home = () => {
           <p className="text-center text-gray-600 text-sm sm:text-base mb-6">Transform Words Into Stunning Images</p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+          <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
               <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
                 <i className="fas fa-edit text-blue-600"></i>
               </div>
               <h3 className="font-bold text-base">Describe</h3>
               <p className="text-gray-600 text-xs sm:text-sm">Enter your vision in text</p>
             </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
               <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
                 <i className="fas fa-bolt text-blue-600"></i>
               </div>
               <h3 className="font-bold text-base">Generate</h3>
               <p className="text-gray-600 text-xs sm:text-sm ">AI creates your artwork</p>
             </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
               <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
                 <i className="fas fa-image text-blue-600"></i>
               </div>

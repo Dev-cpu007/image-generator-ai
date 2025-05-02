@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 
 const Navbar = () => {
-    const [user,setUser] = useState(true)
     const navigate = useNavigate()
-    
+    const {user} = useContext(AppContext)
     return (
         <div>
                     {/* <!-- Mobile-first header --> */}
-    <header className="w-full py-4 sm:py-5 px-4 sm:px-8 md:px-16 flex flex-wrap justify-between items-center bg-white shadow-sm">
+    <header className="w-full py-4 sm:py-5 px-4 sm:px-8 md:px-16 flex flex-wrap justify-between items-center shadow-sm">
       {/* <!-- Logo --> */}
       <div className="flex items-center space-x-2">
         <span className="inline-block bg-[#3885ff] rounded-lg p-2">
@@ -66,11 +66,16 @@ const Navbar = () => {
             Credits left: 4
           </span>
           <span className="text-[#333] font-normal text-base">Hi! Richard</span>
-          <span className="inline-flex items-center justify-center w-9 h-9 bg-white border border-gray-200 rounded-full">
+          <span className="relative group inline-flex items-center justify-center w-9 h-9 bg-white border border-gray-200 rounded-full">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="8" r="4" fill="#dbeafe" />
               <ellipse cx="12" cy="16" rx="6" ry="4" fill="#dbeafe" />
             </svg>
+            <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
+                <ul className='list-none m-0 p-2 bg-white rounded-md border text-sm'>
+                <li className='py-1 px-2 cursor-pointer pr-10'>Logout</li>
+                </ul>
+            </div>
           </span>
         </div>
       )
