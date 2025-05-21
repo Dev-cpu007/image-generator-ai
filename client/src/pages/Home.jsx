@@ -1,194 +1,239 @@
-import React from 'react';
+import React from "react";
 
 const Home = () => {
-    return (
-        <>
-    {/* <!-- Hero section --> */}
-    <main className="flex-grow">
-      <section className="pt-6 pb-12 px-5 sm:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* <!-- Badge - using original placeholder --> */}
-          <div className="mb-4 sm:mb-8 text-center">
-            <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 rounded-full border border-gray-200 bg-white shadow-sm text-sm sm:text-base font-normal">
-              Best text to image generator
-              <span className="ml-1 sm:ml-2">🧡</span>
-            </span>
-          </div>
-          
-          {/* <!-- Responsive headline --> */}
-          <h1 className="hero-heading text-center text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight mb-4">
-            Turn text to <span className="text-[#3885ff]">image</span>, <br className="sm:hidden"/>in seconds
-          </h1>
-          
-          {/* <!-- Description --> */}
-          <p className="hero-description text-center text-gray-600 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Unleash your creativity with AI. Turn your imagination into visual art instantly.
-          </p>
-          
-          {/* <!-- CTA - using original styling --> */}
-          <div className="flex justify-center">
-            <button className="w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition flex items-center justify-center">
-              <span className="mr-2 text-base sm:text-lg">Generate Images</span>
-              <span>✨</span>
-            </button>
-          </div>
-          
-          {/* <!-- Images - using original placeholders --> */}
-          <div className="mt-6 sm:mt-10"> 
-            {/* <!-- Reduced top margin on mobile --> */}
-            <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-3 justify-center"> 
+  return (
+    <>
+      {/* <!-- Hero section --> */}
+      <main className="flex-grow">
+        <section className="pt-6 pb-12 px-5 sm:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* <!-- Badge - using original placeholder --> */}
+            <div className="mb-4 sm:mb-8 text-center">
+              <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 rounded-full border border-gray-200 bg-white shadow-sm text-sm sm:text-base font-normal">
+                Best text to image generator
+                <span className="ml-1 sm:ml-2">🧡</span>
+              </span>
+            </div>
+
+            {/* <!-- Responsive headline --> */}
+            <h1 className="hero-heading text-center text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight mb-4">
+              Turn text to <span className="text-[#3885ff]">image</span>,{" "}
+              <br className="sm:hidden" />
+              in seconds
+            </h1>
+
+            {/* <!-- Description --> */}
+            <p className="hero-description text-center text-gray-600 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
+              Unleash your creativity with AI. Turn your imagination into visual
+              art instantly.
+            </p>
+
+            {/* <!-- CTA - using original styling --> */}
+            <div className="flex justify-center">
+              <button className="w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition flex items-center justify-center">
+                <span className="mr-2 text-base sm:text-lg">
+                  Generate Images
+                </span>
+                <span>✨</span>
+              </button>
+            </div>
+
+            {/* <!-- Images - using original placeholders --> */}
+            <div className="mt-6 sm:mt-10">
+              {/* <!-- Reduced top margin on mobile --> */}
+              <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-3 justify-center">
                 {/* <!-- Tighter gap on mobile --> */}
-              {/* <!-- Image 1 - Always visible --> */}
-              <div className="flex justify-center"> 
-                {/* <!-- Wrapper for better centering --> */}
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNxoeiMi1MIf18hNC8kWiGzwtYDl0qcVA6fQQ4GvVSQ&s&ec=72940545" 
-                     alt="AI artwork sample" 
-                     className="w-20 sm:w-24 aspect-square rounded-lg object-cover" 
-                     loading="lazy"/> 
-                     {/* <!-- Smaller size (w-20) on mobile --> */}
+                {/* <!-- Image 1 - Always visible --> */}
+                <div className="flex justify-center">
+                  {/* <!-- Wrapper for better centering --> */}
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNxoeiMi1MIf18hNC8kWiGzwtYDl0qcVA6fQQ4GvVSQ&s&ec=72940545"
+                    alt="AI artwork sample"
+                    className="w-20 sm:w-24 aspect-square rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                  {/* <!-- Smaller size (w-20) on mobile --> */}
+                </div>
+
+                {/* <!-- Image 2 - Always visible --> */}
+                <div className="flex justify-center">
+                  <img
+                    src="https://img-cdn.pixlr.com/image-generator/history/65ba5701b4f4f4419f746bc3/806ecb58-167c-4d20-b658-a6a6b2f221e9/medium.webp"
+                    alt="AI artwork sample"
+                    className="w-20 sm:w-24 aspect-square rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* <!-- Image 3 - Hidden on mobile --> */}
+                <div className="hidden sm:flex justify-center">
+                  {/* <!-- More semantic hiding --> */}
+                  <img
+                    src="https://asset.gecdesigns.com/img/wallpapers/hyper-realistic-beautiful-young-woman-with-party-gown-ai-generated-image-sr14062404-cover.webp"
+                    alt="AI artwork sample"
+                    className="w-24 aspect-square rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* <!-- Image 4 - Hidden on mobile --> */}
+                <div className="hidden sm:flex justify-center">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWmCEcMIJGwOqEtCFCxu8LErGvaNYnOTOtXBI1DwCsTw&s&ec=72940545"
+                    alt="AI artwork sample"
+                    className="w-24 aspect-square rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-              
-              {/* <!-- Image 2 - Always visible --> */}
-              <div className="flex justify-center">
-                <img src="https://img-cdn.pixlr.com/image-generator/history/65ba5701b4f4f4419f746bc3/806ecb58-167c-4d20-b658-a6a6b2f221e9/medium.webp" 
-                     alt="AI artwork sample" 
-                     className="w-20 sm:w-24 aspect-square rounded-lg object-cover"
-                     loading="lazy"/>
+              <p className="text-center text-gray-500 text-xs mt-1 sm:mt-2">
+                {/* <!-- Tighter spacing --> */}
+                Examples generated by Kalpana-AI
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* <!-- Showcase grid - using original placeholders --> */}
+        <section className="py-6 px-5">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-xl sm:text-2xl font-bold text-center mb-4">
+              AI Generated Masterpieces
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* <!-- Card 1 --> */}
+              <div className="bg-white p-3 rounded-lg shadow-sm">
+                <div className="aspect-square overflow-hidden rounded-lg mb-2">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/033/096/522/small_2x/volcanic-eruption-disaster-ai-generated-photo.jpg"
+                    alt="Volcanic eruption"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 text-center">
+                  "Sunset over mountains"
+                </p>
               </div>
-              
-              {/* <!-- Image 3 - Hidden on mobile --> */}
-              <div className="hidden sm:flex justify-center"> 
-                {/* <!-- More semantic hiding --> */}
-                <img src="https://asset.gecdesigns.com/img/wallpapers/hyper-realistic-beautiful-young-woman-with-party-gown-ai-generated-image-sr14062404-cover.webp" 
-                     alt="AI artwork sample" 
-                     className="w-24 aspect-square rounded-lg object-cover"
-                     loading="lazy"/>
+              {/* <!-- Card 2 --> */}
+              <div className="bg-white p-3 rounded-lg shadow-sm">
+                <div className="aspect-square overflow-hidden rounded-lg mb-2">
+                  <img
+                    src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/398a7fa4-5de3-4b47-aeb7-18060ae4a772/d34436e8-f22b-4a0e-90d0-ab3f8e81f2f5.png"
+                    alt="Ocean view"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 text-center">
+                  "Ocean at sunset"
+                </p>
               </div>
-              
-              {/* <!-- Image 4 - Hidden on mobile --> */}
-              <div className="hidden sm:flex justify-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWmCEcMIJGwOqEtCFCxu8LErGvaNYnOTOtXBI1DwCsTw&s&ec=72940545" 
-                     alt="AI artwork sample" 
-                     className="w-24 aspect-square rounded-lg object-cover"
-                     loading="lazy"/>
+              {/* <!-- Card 3 --> */}
+              <div className="bg-white p-3 rounded-lg shadow-sm">
+                <div className="aspect-square overflow-hidden rounded-lg mb-2">
+                  <img
+                    src="https://t3.ftcdn.net/jpg/05/58/17/60/360_F_558176055_q1eGdm8DLq9I6por4yilpNCaL3O8Fguf.jpg"
+                    alt="Forest path"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 text-center">
+                  "Misty forest pathway"
+                </p>
               </div>
             </div>
-            <p className="text-center text-gray-500 text-xs mt-1 sm:mt-2"> 
-                {/* <!-- Tighter spacing --> */}
-              Examples generated by Kalpana-AI
+          </div>
+        </section>
+
+        {/* <!-- Steps section - original layout --> */}
+        <section className="py-8 px-5">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">
+              How it works
+            </h2>
+            <p className="text-center text-gray-600 text-sm sm:text-base mb-6">
+              Transform Words Into Stunning Images
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+                <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-edit text-blue-600"></i>
+                </div>
+                <h3 className="font-bold text-base">Describe</h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Enter your vision in text
+                </p>
+              </div>
+              <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+                <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-bolt text-blue-600"></i>
+                </div>
+                <h3 className="font-bold text-base">Generate</h3>
+                <p className="text-gray-600 text-xs sm:text-sm ">
+                  AI creates your artwork
+                </p>
+              </div>
+              <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+                <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-image text-blue-600"></i>
+                </div>
+                <h3 className="font-bold text-base">Enjoy</h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Download or share
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section>
+        <header className="pt-16 pb-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Create AI Images
+          </h1>
+          <p className="mt-3 text-lg text-gray-400 font-normal">
+            Turn your imagination into visuals
+          </p>
+        </header>
+
+        {/* <!-- Main Section --> */}
+        <section className="flex flex-col lg:flex-row gap-12 items-center justify-center mt-2 max-w-6xl mx-auto px-4 py-8">
+          {/* <!-- Left: Image --> */}
+          <div className="flex-shrink-0">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+              alt="AI generated, monster and cake"
+              className="rounded-xl shadow-lg max-w-xs sm:max-w-md lg:max-w-lg w-full object-cover"
+              style={{ aspectRatio: "1/1" }}
+            />
+          </div>
+          {/* <!-- Right: Text --> */}
+          <div className="max-w-xl text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-5 leading-snug">
+              Introducing the AI-Powered Text to Image Generator
+            </h2>
+            <p className="text-gray-500 text-base mb-4">
+              Easily bring your ideas to life with our free AI image generator.
+              Whether you need stunning visuals or unique imagery, our tool
+              transforms your text into eye-catching images with just a few
+              clicks. Imagine it, describe it, and watch it come to life
+              instantly.
+            </p>
+            <p className="text-gray-500 text-base">
+              Simply type in a text prompt, and our cutting-edge AI will
+              generate high-quality images in seconds. From product visuals to
+              character designs and portraits, even concepts that don’t yet
+              exist can be visualized effortlessly. Powered by advanced AI
+              technology, the creative possibilities are limitless!
             </p>
           </div>
-          
-        </div>
+        </section>
       </section>
-      
-      {/* <!-- Customer Testimonials Section --> */}
-      
-      {/* <!-- Showcase grid - using original placeholders --> */}
-      <section className="py-6 px-5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-center mb-4">AI Generated Masterpieces</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* <!-- Card 1 --> */}
-            <div className="bg-white p-3 rounded-lg shadow-sm">
-              <div className="aspect-square overflow-hidden rounded-lg mb-2">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/033/096/522/small_2x/volcanic-eruption-disaster-ai-generated-photo.jpg" 
-                alt="Volcanic eruption" 
-                className="w-full h-full object-cover"
-                loading="lazy"/>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-600 text-center">"Sunset over mountains"</p>
-            </div>
-            {/* <!-- Card 2 --> */}
-            <div className="bg-white p-3 rounded-lg shadow-sm">
-              <div className="aspect-square overflow-hidden rounded-lg mb-2">
-                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/398a7fa4-5de3-4b47-aeb7-18060ae4a772/d34436e8-f22b-4a0e-90d0-ab3f8e81f2f5.png" 
-                alt="Ocean view" 
-                className="w-full h-full object-cover"
-                loading="lazy"/>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-600 text-center">"Ocean at sunset"</p>
-            </div>
-            {/* <!-- Card 3 --> */}
-            <div className="bg-white p-3 rounded-lg shadow-sm">
-              <div className="aspect-square overflow-hidden rounded-lg mb-2">
-                <img src="https://t3.ftcdn.net/jpg/05/58/17/60/360_F_558176055_q1eGdm8DLq9I6por4yilpNCaL3O8Fguf.jpg" 
-                alt="Forest path" 
-                className="w-full h-full object-cover"
-                loading="lazy"/>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-600 text-center">"Misty forest pathway"</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* <!-- Steps section - original layout --> */}
-      <section className="py-8 px-5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">How it works</h2>
-          <p className="text-center text-gray-600 text-sm sm:text-base mb-6">Transform Words Into Stunning Images</p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
-                <i className="fas fa-edit text-blue-600"></i>
-              </div>
-              <h3 className="font-bold text-base">Describe</h3>
-              <p className="text-gray-600 text-xs sm:text-sm">Enter your vision in text</p>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
-                <i className="fas fa-bolt text-blue-600"></i>
-              </div>
-              <h3 className="font-bold text-base">Generate</h3>
-              <p className="text-gray-600 text-xs sm:text-sm ">AI creates your artwork</p>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <div className="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
-                <i className="fas fa-image text-blue-600"></i>
-              </div>
-              <h3 className="font-bold text-base">Enjoy</h3>
-              <p className="text-gray-600 text-xs sm:text-sm">Download or share</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <section>
-      <header className="pt-16 pb-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Create AI Images</h1>
-        <p className="mt-3 text-lg text-gray-400 font-normal">Turn your imagination into visuals</p>
-      </header>
-      
-      {/* <!-- Main Section --> */}
-      <section className="flex flex-col lg:flex-row gap-12 items-center justify-center mt-2 max-w-6xl mx-auto px-4 py-8">
-        {/* <!-- Left: Image --> */}
-        <div className="flex-shrink-0">
-          <img 
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-          alt="AI generated, monster and cake"
-          className="rounded-xl shadow-lg max-w-xs sm:max-w-md lg:max-w-lg w-full object-cover"
-          style={{ aspectRatio: '1/1' }}
-          />
-        </div>
-        {/* <!-- Right: Text --> */}
-        <div className="max-w-xl text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-5 leading-snug">
-            Introducing the AI-Powered Text to Image Generator
-          </h2>
-          <p className="text-gray-500 text-base mb-4">
-            Easily bring your ideas to life with our free AI image generator. Whether you need stunning visuals or unique imagery, our tool transforms your text into eye-catching images with just a few clicks. Imagine it, describe it, and watch it come to life instantly.
-          </p>
-          <p className="text-gray-500 text-base">
-            Simply type in a text prompt, and our cutting-edge AI will generate high-quality images in seconds. From product visuals to character designs and portraits, even concepts that don’t yet exist can be visualized effortlessly. Powered by advanced AI technology, the creative possibilities are limitless!
-          </p>
-        </div>
-      </section>
-    </section>
-    
-        </>
-    );
-}
+    </>
+  );
+};
 
 export default Home;
